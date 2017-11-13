@@ -9,6 +9,7 @@ class MainPresenterImpl : MainPresenter {
 
     override fun setView(view: MainView) {
         this.view = view
+        view.loadDevices()
     }
 
     override fun clearView() {

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">OpenUp</string>
     <string name="add_a_new_device">Add a new device</string>
+
+    <string name="title_activity_qrscanner">QRScannerActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
