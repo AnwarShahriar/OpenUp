@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const localIP = require('my-local-ip')
 const app = express()
 const qrcode = require('qrcode-terminal')
+const open = require('open')
 
 app.use(bodyParser.json())
 
@@ -10,6 +11,7 @@ app.post('/openup', (req, res) => {
     let msg;
     if (req.body.url) {
         msg = 'Will try to open up url with default browser'
+        open(req.body.url)
     } else {
         msg = 'Please, give me a url'
     }
