@@ -12,6 +12,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "get-urls": "^7.0.0",
     "my-local-ip": "^1.0.0",
     "open": "0.0.5",
     "qrcode": "^1.0.0",

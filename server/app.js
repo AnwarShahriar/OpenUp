@@ -4,6 +4,7 @@ const localIP = require('my-local-ip')
 const app = express()
 const qrcode = require('qrcode-terminal')
 const open = require('open')
+const getUrls = require('get-urls')
 
 app.use(bodyParser.json())
 
@@ -11,7 +12,12 @@ app.post('/openup', (req, res) => {
     let msg;
     if (req.body.url) {
         msg = 'Will try to open up url with default browser'
-        open(req.body.url)
+        let urlSet = getUrls(req.body.url)
+        console.log(urlSet)
+        if (urlSet.size) {
+            console.log(urlSet.entries().next().value[0])
+            open(urlSet.entries().next().value[0])
+        }
     } else {
         msg = 'Please, give me a url'
     }
